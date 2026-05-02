@@ -1,0 +1,10 @@
+[workspace]
+
+members = [
+    "functions/rust-product-get",
+    "functions/rust-product-post"
+]
+
+resolver ="2"
+
+[workspace.dependencies]
