@@ -34,7 +34,7 @@ resource "aws_lambda_function" "get_product" {
   function_name = "get_product"
   role          = aws_iam_role.lambda_exec_role.arn
   handler       = "bootstrap"
-  runtime       = "provided.al2"
+  runtime       = "provided.al2023"
 
   filename         = "${path.module}/${var.get_zip_path}"
   source_code_hash = filebase64sha256("${path.module}/${var.get_zip_path}")
@@ -44,7 +44,7 @@ resource "aws_lambda_function" "post_product" {
   function_name = "post_product"
   role          = aws_iam_role.lambda_exec_role.arn
   handler       = "bootstrap"
-  runtime       = "provided.al2"
+  runtime       = "provided.al2023"
 
   filename         = "${path.module}/${var.post_zip_path}"
   source_code_hash = filebase64sha256("${path.module}/${var.post_zip_path}")

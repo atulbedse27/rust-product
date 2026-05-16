@@ -4,7 +4,7 @@ use serde_json::{json, Value};
 async fn handler(_event: LambdaEvent<Value>) -> Result<Value, Error> {
     Ok(json!({
         "statusCode": 200,
-        "body": "Product fetched"
+        "body": "Product is successfully fetched."
     }))
 }
 
